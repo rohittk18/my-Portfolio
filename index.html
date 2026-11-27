@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio | Web Developer</title>
+    <title>Rohit Kumar | Web Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Rohit Kumar, a Computer Science Engineering student learning web development with HTML, CSS, JavaScript and Java.">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,9 +97,13 @@
                         <i class="fab fa-github"></i>
                     </a>
 
-                    <a href="https://linkedin.com/in/yourusername"
+                    <a href="https://www.linkedin.com/in/yourusername"
                        target="_blank" rel="noopener" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="mailto:your.email@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
                     </a>
                 </div>
 
@@ -359,36 +366,72 @@
             <h2 class="section-title">Contact <span>Me</span></h2>
 
             <p class="section-subtitle">
-                Have a question or want to work together?
+                Have a question or want to work together? Get in touch!
             </p>
 
-            <form id="contactForm" class="reveal">
+            <div class="contact-grid">
 
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Your Name"
-                    required
-                >
+                <!-- Contact details & social links -->
+                <div class="contact-info">
 
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Your Email"
-                    required
-                >
+                    <a href="mailto:your.email@gmail.com" class="contact-item reveal">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <span>your.email@gmail.com</span>
+                        </div>
+                    </a>
 
-                <textarea
-                    id="message"
-                    placeholder="Your Message"
-                    required
-                ></textarea>
+                    <a href="https://github.com/rohittk18" target="_blank"
+                       rel="noopener" class="contact-item reveal">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <span>github.com/rohittk18</span>
+                        </div>
+                    </a>
 
-                <button type="submit">
-                    Send Message
-                </button>
+                    <a href="https://www.linkedin.com/in/yourusername" target="_blank"
+                       rel="noopener" class="contact-item reveal">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <span>linkedin.com/in/yourusername</span>
+                        </div>
+                    </a>
 
-            </form>
+                </div>
+
+                <!-- Contact form -->
+                <form id="contactForm" class="reveal">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <textarea
+                        id="message"
+                        placeholder="Your Message"
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+
+                </form>
+
+            </div>
 
         </div>
 
@@ -399,6 +442,14 @@
     <footer class="footer">
         <div class="container">
             <p>© <span id="year"></span> Rohit Kumar. All Rights Reserved.</p>
+
+            <div class="footer-social">
+                <a href="https://github.com/rohittk18" target="_blank"
+                   rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank"
+                   rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:your.email@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
 
             <a href="#home">
                 Back to Top <i class="fas fa-arrow-up"></i>
