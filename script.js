@@ -162,6 +162,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 // ===================================
+// 5b. HIGHLIGHT ACTIVE NAV LINK ON SCROLL
+// ===================================
+
+const pageSections = document.querySelectorAll("main section[id], section[id]");
+const navAnchors = document.querySelectorAll(".nav-links a");
+
+function highlightNav() {
+    const scrollPos = window.scrollY + 120;
+    let currentId = "";
+
+    pageSections.forEach(section => {
+        if (scrollPos >= section.offsetTop) {
+            currentId = section.id;
+        }
+    });
+
+    navAnchors.forEach(a => {
+        a.classList.toggle("active", a.getAttribute("href") === "#" + currentId);
+    });
+}
+
+window.addEventListener("scroll", highlightNav, { passive: true });
+highlightNav();
+
+
+// ===================================
 // 6. CURRENT YEAR IN FOOTER
 // ===================================
 
