@@ -4,127 +4,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | Personal Website</title>
+
+    <title>My Portfolio | Web Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <h2 class="logo">MyPortfolio</h2>
+    <header class="header">
+        <nav class="navbar container">
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+            <a href="#home" class="logo">My<span>Portfolio.</span></a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
         </nav>
     </header>
 
+
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+    <section class="hero section" id="home">
 
-            <h1>Hello, I'm <span>Rohit Kumar</span></h1>
+        <div class="container hero-container">
 
-            <h2>Computer Science Engineering Student</h2>
+            <div class="hero-content">
 
-            <p>
-                I am a passionate student interested in Web Development,
-                Software Development and learning new technologies.
-            </p>
+                <p class="welcome">WELCOME TO MY PORTFOLIO</p>
 
-            <a href="#contact" class="btn">Contact Me</a>
-            <a href="#about" class="btn secondary">About Me</a>
+                <h1>Hello, I'm <span>Rohit Kumar</span></h1>
+
+                <h2>Computer Science Engineering Student</h2>
+
+                <p class="hero-description">
+                    I am passionate about Web Development,
+                    Programming and Software Development.
+                    I enjoy learning new technologies and
+                    creating useful projects.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">
+                        Contact Me <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#about" class="btn btn-outline">
+                        About Me
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/yourusername"
+                       target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="https://linkedin.com/in/yourusername"
+                       target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+                <img src="images/profile.jpg"
+                     alt="My Profile Photograph">
+            </div>
+
         </div>
 
-        <div class="hero-image">
-            <img src="images/profile.jpg" alt="My Profile Photo">
-        </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
 
-        <div class="about-content">
-            <p>
-                Hello! I am a B.Tech Computer Science Engineering student.
-                I am interested in technology, programming and website
-                development.
+    <!-- About Section -->
+    <section class="about section" id="about">
 
-                I enjoy solving problems, learning new programming
-                languages and building practical projects.
+        <div class="container">
 
-                My goal is to become a skilled Software Development
-                Engineer and work on real-world applications.
+            <h2 class="section-title">About <span>Me</span></h2>
+
+            <p class="section-subtitle">
+                Get to know more about me
             </p>
+
+            <div class="about-content">
+
+                <div class="about-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+
+                <div class="about-text">
+                    <h3>Who Am I?</h3>
+
+                    <p>
+                        I am a Computer Science Engineering student
+                        interested in technology and software development.
+                        I am learning HTML, CSS, JavaScript and Java.
+                        My goal is to become a skilled software developer
+                        and build real-world applications.
+                    </p>
+
+                    <a href="#contact" class="btn">
+                        Let's Connect
+                    </a>
+                </div>
+
+            </div>
+
         </div>
+
     </section>
+
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2 class="section-title">My Skills</h2>
+    <section class="skills section" id="skills">
 
-        <div class="skills-container">
+        <div class="container">
 
-            <div class="skill-card">
-                <h3>HTML</h3>
-                <p>Creating website structures.</p>
-            </div>
+            <h2 class="section-title">My <span>Skills</span></h2>
 
-            <div class="skill-card">
-                <h3>CSS</h3>
-                <p>Designing and styling websites.</p>
-            </div>
+            <p class="section-subtitle">
+                Technologies I am learning
+            </p>
 
-            <div class="skill-card">
-                <h3>Java</h3>
-                <p>Programming and problem solving.</p>
-            </div>
+            <div class="skills-grid">
 
-            <div class="skill-card">
-                <h3>JavaScript</h3>
-                <p>Learning interactive web development.</p>
-            </div>
+                <div class="skill-card">
+                    <i class="fab fa-html5 html-icon"></i>
+                    <h3>HTML5</h3>
+                    <p>Creating website structures.</p>
+                </div>
 
-            <div class="skill-card">
-                <h3>Python</h3>
-                <p>Learning programming and development.</p>
-            </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt css-icon"></i>
+                    <h3>CSS3</h3>
+                    <p>Styling and responsive layouts.</p>
+                </div>
 
-            <div class="skill-card">
-                <h3>DSA</h3>
-                <p>Practicing data structures and algorithms.</p>
+                <div class="skill-card">
+                    <i class="fab fa-js js-icon"></i>
+                    <h3>JavaScript</h3>
+                    <p>Adding interactive features.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fab fa-java java-icon"></i>
+                    <h3>Java</h3>
+                    <p>Learning programming and DSA.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fab fa-github github-icon"></i>
+                    <h3>GitHub</h3>
+                    <p>Managing and sharing projects.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-code code-icon"></i>
+                    <h3>VS Code</h3>
+                    <p>Writing and managing code.</p>
+                </div>
+
             </div>
 
         </div>
+
     </section>
+
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Contact Me</h2>
+    <section class="contact section" id="contact">
 
-        <p>Feel free to contact me for collaboration or opportunities.</p>
+        <div class="container">
 
-        <div class="contact-info">
-            <p>Email: yourmail@example.com</p>
-            <p>LinkedIn: linkedin.com/in/yourprofile</p>
-            <p>GitHub: github.com/yourusername</p>
+            <h2 class="section-title">Contact <span>Me</span></h2>
+
+            <p class="section-subtitle">
+                Let's work and learn together
+            </p>
+
+            <div class="contact-card">
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <a href="mailto:rohittkashyapp18@gmail.com">
+                            rohittkashyapp18@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/yourusername"
+                           target="_blank">
+                            Visit my GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://linkedin.com/in/yourusername"
+                           target="_blank">
+                            Connect with me
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
-        <a href="mailto:yourmail@example.com" class="btn">
-            Send Email
-        </a>
     </section>
 
+
     <!-- Footer -->
-    <footer>
-        <p>© 2026 Your Name. All Rights Reserved.</p>
+    <footer class="footer">
+
+        <div class="container">
+            <p>
+                © 2026 Your Name. All Rights Reserved.
+            </p>
+
+            <a href="#home">
+                Back to Top <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+
     </footer>
+
+
+    <!-- Mobile Navigation JavaScript -->
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", function () {
+
+            navLinks.classList.toggle("show");
+
+            const isOpen = navLinks.classList.contains("show");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            menuToggle.innerHTML = isOpen
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close menu after clicking a navigation link
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navLinks.classList.remove("show");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+
+            });
+
+        });
+    </script>
 
 </body>
 </html>
