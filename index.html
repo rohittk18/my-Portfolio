@@ -7,6 +7,14 @@
     <title>Rohit Kumar | Web Developer Portfolio</title>
     <meta name="description" content="Portfolio of Rohit Kumar, a Computer Science Engineering student learning web development with HTML, CSS, JavaScript and Java.">
     <meta name="theme-color" content="#2563eb">
+
+    <!-- Social sharing preview (LinkedIn, WhatsApp, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rohit Kumar | Web Developer Portfolio">
+    <meta property="og:description" content="Computer Science Engineering student learning web development. Explore my skills, projects and education.">
+    <meta property="og:url" content="https://rohittk18.github.io/my-Portfolio/">
+    <meta property="og:image" content="https://rohittk18.github.io/my-Portfolio/images/profile.jpg">
+    <link rel="canonical" href="https://rohittk18.github.io/my-Portfolio/">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 
     <!-- Google Fonts -->
@@ -20,9 +28,16 @@
 
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- If JavaScript is off, show everything instead of hiding animated content -->
+    <noscript>
+        <style>.reveal { opacity: 1; transform: none; }</style>
+    </noscript>
 </head>
 
 <body>
+
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <!-- Navigation Bar -->
     <header class="header">
@@ -55,6 +70,8 @@
         </div>
     </header>
 
+
+    <main id="main">
 
     <!-- Hero Section -->
     <section class="hero section" id="home">
@@ -97,12 +114,12 @@
                         <i class="fab fa-github"></i>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/yourusername"
+                    <a href="https://www.linkedin.com/in/rohitkashyap"
                        target="_blank" rel="noopener" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
 
-                    <a href="mailto:your.email@gmail.com" aria-label="Email">
+                    <a href="mailto:rohittkashyapp18@gmail.com" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -111,7 +128,9 @@
 
             <div class="hero-image">
                 <img src="images/profile.jpg"
-                     alt="My Profile Photograph">
+                     width="560" height="899"
+                     decoding="async" fetchpriority="high"
+                     alt="Portrait photo of Rohit Kumar">
             </div>
 
         </div>
@@ -320,7 +339,7 @@
                     <div class="timeline-card">
                         <span class="timeline-date">2023 - Present</span>
                         <h3>B.Tech in Computer Science Engineering</h3>
-                        <p class="timeline-place">Your College / University Name</p>
+                        <p class="timeline-place">Galgotias University</p>
                         <p>Studying programming, data structures and web development.</p>
                     </div>
                 </div>
@@ -340,7 +359,7 @@
                     <div class="timeline-card">
                         <span class="timeline-date">2021 - 2023</span>
                         <h3>Senior Secondary (Class 12)</h3>
-                        <p class="timeline-place">Your School Name</p>
+                        <p class="timeline-place">Kaynat Glorious Public School</p>
                         <p>Science stream with Mathematics.</p>
                     </div>
                 </div>
@@ -374,11 +393,11 @@
                 <!-- Contact details & social links -->
                 <div class="contact-info">
 
-                    <a href="mailto:your.email@gmail.com" class="contact-item reveal">
+                    <a href="mailto:rohittkashyapp18@gmail.com" class="contact-item reveal">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3>Email</h3>
-                            <span>your.email@gmail.com</span>
+                            <span>rohittkashyapp18@gmail.com</span>
                         </div>
                     </a>
 
@@ -391,12 +410,12 @@
                         </div>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/yourusername" target="_blank"
+                    <a href="https://www.linkedin.com/in/rohitkashyap" target="_blank"
                        rel="noopener" class="contact-item reveal">
                         <i class="fab fa-linkedin"></i>
                         <div>
                             <h3>LinkedIn</h3>
-                            <span>linkedin.com/in/yourusername</span>
+                            <span>linkedin.com/in/rohitkashyap</span>
                         </div>
                     </a>
 
@@ -438,6 +457,8 @@
     </section>
 
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -446,9 +467,9 @@
             <div class="footer-social">
                 <a href="https://github.com/rohittk18" target="_blank"
                    rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/yourusername" target="_blank"
+                <a href="https://www.linkedin.com/in/rohitkashyap" target="_blank"
                    rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:your.email@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:rohittkashyapp18@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
 
             <a href="#home">
@@ -457,6 +478,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
