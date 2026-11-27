@@ -102,6 +102,9 @@ if ("IntersectionObserver" in window) {
 // 4. CONTACT FORM VALIDATION
 // ===================================
 
+// Change this to your real email address
+const CONTACT_EMAIL = "your.email@gmail.com";
+
 const contactForm = document.querySelector("#contactForm");
 
 if (contactForm) {
@@ -129,7 +132,14 @@ if (contactForm) {
             return;
         }
 
-        alert("Thank you! Your message has passed validation.");
+        // Open the visitor's email app with the message filled in
+        const subject = encodeURIComponent("Portfolio message from " + name);
+        const body = encodeURIComponent(
+            message + "\n\nFrom: " + name + " (" + email + ")"
+        );
+
+        window.location.href =
+            "mailto:" + CONTACT_EMAIL + "?subject=" + subject + "&body=" + body;
 
         contactForm.reset();
     });
