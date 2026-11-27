@@ -23,6 +23,21 @@ if (menuToggle && navLinks) {
     });
 }
 
+// Close menu with the Escape key or when clicking outside it
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+});
+
+document.addEventListener("click", (event) => {
+    if (
+        navLinks?.classList.contains("active") &&
+        !navLinks.contains(event.target) &&
+        !menuToggle.contains(event.target)
+    ) {
+        closeMenu();
+    }
+});
+
 // Close menu after clicking a link
 document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", closeMenu);
@@ -83,8 +98,15 @@ if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
+                const el = entry.target;
+                el.classList.add("visible");
+                observer.unobserve(el);
+
+                // Once the animation has finished, drop the reveal classes
+                // so the element's own hover effects and transitions work.
+                setTimeout(() => {
+                    el.classList.remove("reveal", "visible");
+                }, 900);
             }
         });
     }, {
@@ -102,8 +124,8 @@ if ("IntersectionObserver" in window) {
 // 4. CONTACT FORM VALIDATION
 // ===================================
 
-// Change this to your real email address
-const CONTACT_EMAIL = "your.email@gmail.com";
+// Messages from the contact form are sent to this address
+const CONTACT_EMAIL = "rohittkashyapp18@gmail.com";
 
 const contactForm = document.querySelector("#contactForm");
 
@@ -175,7 +197,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // 5b. HIGHLIGHT ACTIVE NAV LINK ON SCROLL
 // ===================================
 
-const pageSections = document.querySelectorAll("main section[id], section[id]");
+const pageSections = document.querySelectorAll("section[id]");
 const navAnchors = document.querySelectorAll(".nav-links a");
 
 function highlightNav() {
