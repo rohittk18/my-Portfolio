@@ -1009,3 +1009,81 @@ button:focus-visible {
         animation-duration: 0.01ms !important;
     }
 }
+
+
+/* ===================================
+   FINAL REVIEW FIXES (MODULE 06)
+=================================== */
+
+/* After the reveal animation, JS removes .reveal so these hover
+   effects work normally. This keeps them working during the animation too. */
+.skill-card.reveal.visible:hover,
+.project-card.reveal.visible:hover {
+    transform: translateY(-8px);
+}
+
+.contact-item.reveal.visible:hover {
+    transform: translateY(-4px);
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+    position: absolute;
+    left: 10px;
+    top: -60px;
+    z-index: 2000;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Images should never overflow their container */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-image img {
+    height: 280px;
+}
+
+@media (max-width: 900px) {
+    .hero-image img { height: 220px; }
+}
+
+@media (max-width: 600px) {
+    .hero-image img { height: 200px; }
+}
+
+/* Make buttons easy to tap on phones */
+@media (max-width: 480px) {
+    .hero-buttons .btn {
+        flex: 1 1 100%;
+    }
+
+    .timeline-card {
+        padding: 18px;
+    }
+}
+
+/* Print: hide interactive chrome */
+@media print {
+    .header,
+    .theme-btn,
+    .menu-toggle,
+    #contactForm {
+        display: none;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
